@@ -1,0 +1,58 @@
+.container{
+    text-align: center;
+    font-size: 30px;
+}
+
+h1{
+    color: white;
+}
+
+input{
+    width: 250px;
+    height: 50px;
+    margin-bottom: 40px;
+    font-size: 25px;
+}
+
+.perder{
+    margin-top: 50px;
+    cursor: pointer;
+}
+
+.acierto{
+    background-color: #6AAA64;
+    color: white;
+}
+
+.aciertoNoPosicion{
+    background-color: #C9B458;
+    color: white;
+}
+
+.fallo{
+    background-color: #3A3A3C;
+    color: white;
+}
+
+table{
+    margin: auto;
+    display: inline;
+}
+
+td{
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+    background-color: grey;
+    color: white;
+    cursor: pointer;
+    width: 80px;
+    height: 50px;
+    font-size: 20px;
+    border-radius: 5px 5px 5px;
+}
+
+img{
+    width: 30px;
+    height: 30px;
+}

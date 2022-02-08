@@ -1,0 +1,28 @@
+<div class="container">
+    <h1>WORDLE</h1>
+    <input [(ngModel)]="palabraIntroducida" type="text" maxlength="5" placeholder="Introduce la palabra">
+    <div *ngIf="mostrarTabla">
+        <table>
+            <tr *ngFor="let palabra of palabrasIntroducidas">
+                <td [ngClass]="letra.color" *ngFor="let letra of palabra.letras">{{letra.letra}}</td>
+            </tr><br><br>
+        </table>  
+    </div>  
+    <div>
+        <table>
+            <tr> 
+                <td [ngClass]="letra1.color" *ngFor="let letra1 of listaLetras1" (click)="valor(letra1.letra)">{{letra1.letra}}</td>
+            </tr>
+            <tr>
+                <td [ngClass]="letra2.color" *ngFor="let letra2 of listaLetras2" (click)="valor(letra2.letra)">{{letra2.letra}}</td>
+            </tr>
+            <tr>
+                <td (click)="comprobarPalabra()">ENVIAR</td>
+                <td [ngClass]="letra3.color" *ngFor="let letra3 of listaLetras3" (click)="valor(letra3.letra)">{{letra3.letra}}</td>
+                <td (click)="borrarLetra()"><img src="./assets/borrar.png"></td>
+                <td (click)="borrarTodo()"></td>
+            </tr>
+        </table>
+    </div>      
+    <input class="perder" *ngIf="mostrarBoton" type="button" value="Volver a Jugar" (click)="volverJugar()">
+</div>
